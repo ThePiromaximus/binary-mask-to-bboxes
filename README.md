@@ -20,7 +20,7 @@ Suppose we want to generate the bounding boxes for these particles using ```torc
 You can see right away what the problem with the method is: it calculates the sides of the bounding boxes by taking the coordinates of the 4 farthest points to the right, left, top, and bottom where a pixel of value 1 is located, creating one large bounding box that encloses all the pixels labeled with 1 (i.e., representing the same class).
 Clearly the problem is that although the pixel instances are all labeled with the same value, and thus belong to the same class, the instances are different and we are interested in having a different bounding box for each separate instance. 
 
-Whit my simple code the new bounding boxes produced are:
+With my simple code the new bounding boxes produced are:
 
 ![BBoxes generated with custom code](./imgs/mask_with_bboxes.png)
 
